@@ -1,5 +1,3 @@
-![password prompt preview](preview.png)
-
 # StatiCrypt
 
 Based on the [crypto-js](https://github.com/brix/crypto-js) library, StatiCrypt uses AES-256 to encrypt your string with your passphrase in your browser (client side).
@@ -92,7 +90,7 @@ You can clear the values in localStorage (effectively "login out") at any time b
 
 If you want to encrypt multiple pages and have the "Remember me" checkbox work for all pages (so you have to enter your password on one page and then all other pages are automatically decrypted), you need to pass a `--salt MY_SALT` argument with the same salt for all encrypted pages. The salt isn't secret, so you don't have to worry about hiding it in the command prompt.
 
-Remember to use the same salt if you're encrypting again at a later time, otherwise the users that have checked the "Remember me" box will be logged out when you deploy again (see [this comment](https://github.com/robinmoisson/staticrypt/issues/125#issuecomment-1053617845) for details). You find the salt used in any encrypted file if you've forgotten it, just search for `salt = ` in the encrypted HTML and you'll find it. 
+Remember to use the same salt if you're encrypting again at a later time, otherwise the users that have checked the "Remember me" box will be logged out when you deploy again (see [this comment](https://github.com/robinmoisson/staticrypt/issues/125#issuecomment-1053617845) for details). You find the salt used in any encrypted file if you've forgotten it, just search for `salt = ` in the encrypted HTML and you'll find it.
 
 Because the hashed value is stored in the browser's localStorage, this will only work if all the pages are on the same domain name.
 
